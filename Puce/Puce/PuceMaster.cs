@@ -56,11 +56,28 @@ namespace Puce
             oArtistEdit.Show();
         }
 
+        /// <summary>
+        /// Show the liste of albums
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsbListe_Click(object sender, EventArgs e)
         {
             AlbumList oAlbumList = new AlbumList();
             oAlbumList.MdiParent = this;
             oAlbumList.Show();
+        }
+
+        /// <summary>
+        /// Show the list of artists
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbArtistList_Click(object sender, EventArgs e)
+        {
+            ArtistList oArtistList = new ArtistList();
+            oArtistList.MdiParent = this;
+            oArtistList.Show();
         }
     }
 }

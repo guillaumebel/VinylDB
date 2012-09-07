@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using Puce.BO;
+using Puce.Models;
 
 namespace Puce
 {
@@ -24,6 +24,39 @@ namespace Puce
             InitializeComponent();
         }
 
+        public ArtistEdit(Artist p_oArtist)
+        {
+            SetupData(p_oArtist);
+        }
+
+        #region "Data"
+    
+        public void SetupData (Artist p_oArtist)
+        {
+            txtArtist.Text = p_oArtist.ArtistName;
+            txtBioInfo.Text = p_oArtist.Description;
+            txtGenre.Text = p_oArtist.Genre;
+
+            grdAlbums.DataSource = p_oArtist.Albums;
+        }
+
+        public void SaveData()
+        {
+            Artist oArtist = new Artist();
+            oArtist.ArtistName = txtArtist.Text;
+            oArtist.Description = txtBioInfo.Text;
+            oArtist.Genre = txtGenre.Text;
+            oArtist.LastUpdate = DateTime.Now;
+
+            using (VinylDBContext db = new VinylDBContext())
+            {
+                db.Artists.Add(oArtist);
+                db.SaveChanges();
+            }
+        }
+
+        #endregion
+
         #region "Event"
 
         /// <summary>
@@ -33,7 +66,7 @@ namespace Puce
         /// <param name="e"></param>
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         /// <summary>
@@ -43,20 +76,13 @@ namespace Puce
         /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Artist oArtist = new Artist();
-            oArtist.ArtistName = txtArtist.Text;
-            oArtist.ArtistBio = txtBioInfo.Text;
-            oArtist.ArtistGenre = txtGenre.Text;
 
-            using (PuceContext db = new PuceContext()) 
-            {
-                db.Artists.Add(oArtist);
-                db.SaveChanges();
-            }
+            SaveData();
 
-            this.Close();
+            Close();
         }
 
         #endregion
+
     }
 }

@@ -117,44 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="add2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cd_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cd_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cd_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cd_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="microphone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\microphone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="music" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\music.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="notebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\radio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="window_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="ssAlbum.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tsAlbum.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8B////Af///wH///8Bt5QqLbSSKq+xjynjrYwm/6uJIv+rhxzjqoYXr6uFEy3///8B////Af//
+        /wH///8B////Af///wH///8Bupk1r7iXNP+5kx7/upET/7uREf+7kRH/upAS/7SNFv+phRj/qIMTr///
+        /wH///8B////Af///wHIt4YJv6BC47yYLf+7kRH/u5ER/7uREf+7kRH/u5ER/7uREf+7kRH/u5ER/6+J
+        Ff+mghPjiGkNCf///wH///8BwqNEr7+cMv+7kRH/iGkN/4hpDf+IaQ3/amw0/2psNP+IaQ3/iGkN/4hp
+        Df+IaQ3/iGkN/6iDE6////8Bx6tUNcWnTf+7kRH/L4qo/y+KqP8viqj/L4qo/yZyiv8mcor/L4qo/y+K
+        qP8viqj/L4qo/4hpDf+phRj/poETNcepTLvAnCz/u5ER/4isoP/hz5f/4c+X/+HPl/+4upD/urqP/+HP
+        l//hz5f/4c+X/4isoP+IaQ3/tI0W/6uGF7vNsmHlvJMW/7uREf+qycn/7uTF/9nCe//eyoz/4Nax/97P
+        nP/dyYn/2cF5/+TUov+0zsz/iGkN/7qQEv+phh3l0Ldo/7uREf+7kRH/oMXK//38+P/7+fH/+fXq//Dm
+        yf/n2az/9/Lj//n16v/7+fH/msPL/4hpDf+7kRH/q4ki/9O5bP+7kRH/u5ER/5fE0//9/Pj/+/nx//n1
+        6v/w5sn/59ms//fy4//59er/+/nx/5bD0P+IaQ3/u5ER/62MJv/Uu2/lvJQX/7uREf+XxNP//fz4//v5
+        8f/59er/8ObJ/+fZrP/38uP/+fXq//v58f+Ww9D/iGkN/7qRE/+wjyrl0bReu8WhNf+7kRH/l8TT//38
+        +P/7+fH/+fXq//Dmyf/n2az/9/Lj//n16v/7+fH/lsPQ/7uREf+5kx7/tJIou9W7bTXUuWn/u5ER/7+Y
+        IP/k1KL/69+6/+LQmf/Lq0n/zKxL/+HOlf/q3LT/49Ke/7+YH/+7kRH/uJc0/7aVMTX///8B07dkr8ur
+        Sv+7kRH/u5ER/7uREf+7kRH/u5ER/7uREf+7kRH/u5ER/7uREf+7kRH/vJgt/7qZNa////8B////AfXv
+        3AnVvG3jy6tK/7uREf+7kRH/u5ER/7uREf+7kRH/u5ER/7uREf+7kRH/v5wy/7+gQuO+q3MJ////Af//
+        /wH///8B////AdO3ZK/UuWn/xaE1/7yUF/+7kRH/u5ER/7yTFv/AnCz/xadN/8KjRK////8B////Af//
+        /wH///8B////Af///wH///8Bz7FXL9K3Y6/TuGjj07ls/9C3aP/MsFvjyKpQr8SkQy////8B////Af//
+        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
+</value>
   </data>
 </root>

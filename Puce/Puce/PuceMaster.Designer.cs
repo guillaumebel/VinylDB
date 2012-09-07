@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PuceMaster));
             this.menuPuce = new System.Windows.Forms.MenuStrip();
             this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmFileNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmFileNewArtist = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmFileQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInventoryArtist = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInventoryAlbum = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,14 +43,12 @@
             this.statusPuce = new System.Windows.Forms.StatusStrip();
             this.tssStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tssbNew = new System.Windows.Forms.ToolStripSplitButton();
             this.tsmiNewArtist = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNewAlbum = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbListe = new System.Windows.Forms.ToolStripButton();
-            this.tsmFileNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmFileNewArtist = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmFileQuit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbArtistList = new System.Windows.Forms.ToolStripButton();
             this.menuPuce.SuspendLayout();
             this.statusPuce.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -75,6 +76,29 @@
             this.tsmFile.Size = new System.Drawing.Size(54, 20);
             this.tsmFile.Text = "Fichier";
             // 
+            // tsmFileNew
+            // 
+            this.tsmFileNew.Image = global::Puce.Properties.Resources.cd_new;
+            this.tsmFileNew.Name = "tsmFileNew";
+            this.tsmFileNew.Size = new System.Drawing.Size(158, 22);
+            this.tsmFileNew.Text = "Nouvelle album";
+            this.tsmFileNew.Click += new System.EventHandler(this.tsmFileNew_Click);
+            // 
+            // tsmFileNewArtist
+            // 
+            this.tsmFileNewArtist.Image = global::Puce.Properties.Resources.window_new;
+            this.tsmFileNewArtist.Name = "tsmFileNewArtist";
+            this.tsmFileNewArtist.Size = new System.Drawing.Size(158, 22);
+            this.tsmFileNewArtist.Text = "Nouvelle artiste";
+            this.tsmFileNewArtist.Click += new System.EventHandler(this.tsmFileNewArtist_Click);
+            // 
+            // tsmFileQuit
+            // 
+            this.tsmFileQuit.Name = "tsmFileQuit";
+            this.tsmFileQuit.Size = new System.Drawing.Size(158, 22);
+            this.tsmFileQuit.Text = "Quitter";
+            this.tsmFileQuit.Click += new System.EventHandler(this.tsmFileQuit_Click);
+            // 
             // tsmInventory
             // 
             this.tsmInventory.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,19 +112,19 @@
             // tsmInventoryArtist
             // 
             this.tsmInventoryArtist.Name = "tsmInventoryArtist";
-            this.tsmInventoryArtist.Size = new System.Drawing.Size(137, 22);
+            this.tsmInventoryArtist.Size = new System.Drawing.Size(152, 22);
             this.tsmInventoryArtist.Text = "Par artist...";
             // 
             // tsmInventoryAlbum
             // 
             this.tsmInventoryAlbum.Name = "tsmInventoryAlbum";
-            this.tsmInventoryAlbum.Size = new System.Drawing.Size(137, 22);
+            this.tsmInventoryAlbum.Size = new System.Drawing.Size(152, 22);
             this.tsmInventoryAlbum.Text = "Par album...";
             // 
             // tsmInventoryGenre
             // 
             this.tsmInventoryGenre.Name = "tsmInventoryGenre";
-            this.tsmInventoryGenre.Size = new System.Drawing.Size(137, 22);
+            this.tsmInventoryGenre.Size = new System.Drawing.Size(152, 22);
             this.tsmInventoryGenre.Text = "Par genre...";
             // 
             // tsmAbout
@@ -114,7 +138,7 @@
             // tsmAboutCredit
             // 
             this.tsmAboutCredit.Name = "tsmAboutCredit";
-            this.tsmAboutCredit.Size = new System.Drawing.Size(111, 22);
+            this.tsmAboutCredit.Size = new System.Drawing.Size(152, 22);
             this.tsmAboutCredit.Text = "Crédits";
             // 
             // statusPuce
@@ -139,7 +163,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssbNew,
             this.toolStripSeparator1,
-            this.tsbListe});
+            this.tsbListe,
+            this.tsbArtistList});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -147,71 +172,55 @@
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "tsPuce";
             // 
+            // tssbNew
+            // 
+            this.tssbNew.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiNewArtist,
+            this.tsmiNewAlbum});
+            this.tssbNew.Image = global::Puce.Properties.Resources.window_new;
+            this.tssbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tssbNew.Name = "tssbNew";
+            this.tssbNew.Size = new System.Drawing.Size(86, 22);
+            this.tssbNew.Text = "Nouvel...";
+            // 
+            // tsmiNewArtist
+            // 
+            this.tsmiNewArtist.Image = global::Puce.Properties.Resources.window_new;
+            this.tsmiNewArtist.Name = "tsmiNewArtist";
+            this.tsmiNewArtist.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNewArtist.Text = "Artiste";
+            this.tsmiNewArtist.Click += new System.EventHandler(this.tsmFileNewArtist_Click);
+            // 
+            // tsmiNewAlbum
+            // 
+            this.tsmiNewAlbum.Image = global::Puce.Properties.Resources.cd_new;
+            this.tsmiNewAlbum.Name = "tsmiNewAlbum";
+            this.tsmiNewAlbum.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNewAlbum.Text = "Album";
+            this.tsmiNewAlbum.Click += new System.EventHandler(this.tsmFileNew_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // tssbNew
-            // 
-            this.tssbNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tssbNew.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiNewArtist,
-            this.tsmiNewAlbum});
-            this.tssbNew.Image = global::Puce.Properties.Resources._new;
-            this.tssbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tssbNew.Name = "tssbNew";
-            this.tssbNew.Size = new System.Drawing.Size(32, 22);
-            this.tssbNew.Text = "Nouveau...";
-            // 
-            // tsmiNewArtist
-            // 
-            this.tsmiNewArtist.Image = global::Puce.Properties.Resources.add;
-            this.tsmiNewArtist.Name = "tsmiNewArtist";
-            this.tsmiNewArtist.Size = new System.Drawing.Size(158, 22);
-            this.tsmiNewArtist.Text = "Nouvelle artiste";
-            this.tsmiNewArtist.Click += new System.EventHandler(this.tsmFileNewArtist_Click);
-            // 
-            // tsmiNewAlbum
-            // 
-            this.tsmiNewAlbum.Image = global::Puce.Properties.Resources.add;
-            this.tsmiNewAlbum.Name = "tsmiNewAlbum";
-            this.tsmiNewAlbum.Size = new System.Drawing.Size(158, 22);
-            this.tsmiNewAlbum.Text = "Nouvelle album";
-            this.tsmiNewAlbum.Click += new System.EventHandler(this.tsmFileNew_Click);
-            // 
             // tsbListe
             // 
-            this.tsbListe.Image = global::Puce.Properties.Resources.book;
+            this.tsbListe.Image = global::Puce.Properties.Resources.notebook;
             this.tsbListe.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbListe.Name = "tsbListe";
-            this.tsbListe.Size = new System.Drawing.Size(51, 22);
-            this.tsbListe.Text = "Liste";
+            this.tsbListe.Size = new System.Drawing.Size(103, 22);
+            this.tsbListe.Text = "Liste d\'albums";
             this.tsbListe.Click += new System.EventHandler(this.tsbListe_Click);
             // 
-            // tsmFileNew
+            // tsbArtistList
             // 
-            this.tsmFileNew.Image = global::Puce.Properties.Resources._new;
-            this.tsmFileNew.Name = "tsmFileNew";
-            this.tsmFileNew.Size = new System.Drawing.Size(158, 22);
-            this.tsmFileNew.Text = "Nouvelle album";
-            this.tsmFileNew.Click += new System.EventHandler(this.tsmFileNew_Click);
-            // 
-            // tsmFileNewArtist
-            // 
-            this.tsmFileNewArtist.Image = global::Puce.Properties.Resources._new;
-            this.tsmFileNewArtist.Name = "tsmFileNewArtist";
-            this.tsmFileNewArtist.Size = new System.Drawing.Size(158, 22);
-            this.tsmFileNewArtist.Text = "Nouvelle artiste";
-            this.tsmFileNewArtist.Click += new System.EventHandler(this.tsmFileNewArtist_Click);
-            // 
-            // tsmFileQuit
-            // 
-            this.tsmFileQuit.Image = global::Puce.Properties.Resources.power_off;
-            this.tsmFileQuit.Name = "tsmFileQuit";
-            this.tsmFileQuit.Size = new System.Drawing.Size(158, 22);
-            this.tsmFileQuit.Text = "Quitter";
-            this.tsmFileQuit.Click += new System.EventHandler(this.tsmFileQuit_Click);
+            this.tsbArtistList.Image = global::Puce.Properties.Resources.notebook;
+            this.tsbArtistList.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbArtistList.Name = "tsbArtistList";
+            this.tsbArtistList.Size = new System.Drawing.Size(101, 22);
+            this.tsbArtistList.Text = "Liste d\'artistes";
+            this.tsbArtistList.Click += new System.EventHandler(this.tsbArtistList_Click);
             // 
             // PuceMaster
             // 
@@ -258,6 +267,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiNewAlbum;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbListe;
+        private System.Windows.Forms.ToolStripButton tsbArtistList;
     }
 }
 

@@ -182,7 +182,7 @@
             // tsbSave
             // 
             this.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSave.Image = global::Puce.Properties.Resources.save;
+            this.tsbSave.Image = global::Puce.Properties.Resources.save2;
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
             this.tsbSave.Size = new System.Drawing.Size(23, 22);
@@ -192,7 +192,7 @@
             // tsbDelete
             // 
             this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbDelete.Image = global::Puce.Properties.Resources.delete;
+            this.tsbDelete.Image = global::Puce.Properties.Resources.delete2;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.Size = new System.Drawing.Size(23, 22);
@@ -238,6 +238,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlbumEdit";
             this.Text = "Album";
+            this.Load += new System.EventHandler(this.AlbumEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.tsAlbum.ResumeLayout(false);
             this.tsAlbum.PerformLayout();
